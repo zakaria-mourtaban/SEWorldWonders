@@ -37,8 +37,8 @@ body {
 
 .infocard {
 	width: 600px;
-	height: 400px;
-	background-color: #8f8a84;
+	height: 450px;
+	background-color: #6b6b6b;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -115,7 +115,7 @@ body {
 button
 {
 	text-align: center;
-	background-color: rgba(132, 132, 132, 0.363);
+	background-color: rgba(173, 173, 173, 0.363);
 	color: white;
 	border-style: solid;
 	width: 60%;

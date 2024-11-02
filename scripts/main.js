@@ -32,7 +32,7 @@ function renderElements(index) {
 				element.location,
 				Number(element.build_year) > 0
 					? element.build_year + " AD"
-					: element.build_year + " BC",
+					: element.build_year * -1 + " BC",
 				element.summary,
 				element.links["google_maps"],
 				element.links.wiki,
