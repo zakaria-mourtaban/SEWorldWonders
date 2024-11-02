@@ -38,7 +38,8 @@ function renderElements(index) {
 				element.links.wiki,
 				element.links.britannica,
 				element.links["trip_advisor"],
-				element.links.images
+				element.links.images,
+				element
 			)
 		);
 		currentindex = index;

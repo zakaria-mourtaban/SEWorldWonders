@@ -112,6 +112,24 @@ body {
 	transition: 100ms ease-in;
 }
 
+button
+{
+	text-align: center;
+	background-color: rgba(132, 132, 132, 0.363);
+	color: white;
+	border-style: solid;
+	width: 60%;
+	min-height: 40px;
+	border-radius: 15px;
+	justify-self: center;
+	align-self: center;
+}
+
+button:active
+{
+	background-color: rgb(34, 34, 34);
+}
+
 @media screen and (max-width: 450px) {
 	.hero > h1 {
 		font-family: "Geologica";
@@ -142,3 +160,4 @@ body {
 		background-color: rgba(0, 0, 0, 0);
 	}
 }
+

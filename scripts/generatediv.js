@@ -7,7 +7,8 @@ function generatediv(
 	wikiLink,
 	britannicaLink,
 	tripadvisorLink,
-	imageLink
+	imageLink,
+	element
 ) {
 	const infocard = document.createElement("div");
 	infocard.className = "infocard";
@@ -96,8 +97,14 @@ function generatediv(
 		a.appendChild(img);
 		websitesDiv.appendChild(a);
 	});
-
 	infodiv.appendChild(websitesDiv);
+	const button = document.createElement("button")
+	button.innerText = "Learn More"
+	button.addEventListener("click",function () {
+		localStorage.setItem("element", JSON.stringify(element))
+		window.location.href = "learnmore.html"
+	})
+	infodiv.appendChild(button)
 	infocard.appendChild(infodiv);
 	return infocard;
 }
