@@ -15,9 +15,13 @@ function generatediv(
 	const imgdiv = document.createElement("div");
 	imgdiv.className = "imgdiv";
 	const img = document.createElement("img");
-	img.src = imageLink;
+	let imgindex = 0;
+	img.src = imageLink[0];
 	img.alt = "";
-	img.onload = () => {renderElements(currentindex + 1)};
+	img.onload = () => {
+		renderElements(currentindex + 1)
+	};
+	images.push([img, imageLink])
 	imgdiv.appendChild(img);
 	infocard.appendChild(imgdiv);
 

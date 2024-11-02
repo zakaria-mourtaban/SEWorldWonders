@@ -1,5 +1,7 @@
 axios.defaults.baseURL = "https://www.world-wonders-api.org";
 let currentindex = 0;
+let imageindex = 0;
+let images = [];
 const getResponse = async () => {
 	return await axios.get("/v0/wonders");
 };
@@ -36,9 +38,17 @@ function renderElements(index) {
 				element.links.wiki,
 				element.links.britannica,
 				element.links["trip_advisor"],
-				element.links.images[0]
+				element.links.images
 			)
 		);
 		currentindex = index;
 	}
 }
+// an attempt at adding the switching between images
+// setInterval(() => {
+// 	images.forEach((element) => {
+// 		console.log("switchig")
+// 		imageindex++
+// 		element[0].src = element[1][imageindex % element[1].length]
+// 	})
+// }, 10000);
