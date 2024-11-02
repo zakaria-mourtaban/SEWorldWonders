@@ -1,11 +1,15 @@
 axios.defaults.baseURL = "https://www.world-wonders-api.org";
+let currentindex = 0;
 const getResponse = async () => {
 	return await axios.get("/v0/wonders");
 };
 response = getResponse();
-response.then((res) => renderElements(res));
-
-let basediv = document.createElement("div");
+response.then((res) => {
+	data = res.data;
+	console.log(data);
+	renderElements(currentindex);
+});
+let data;
 //build_year + ie AD or - ie BC
 //links
 //	britannica:
@@ -17,10 +21,9 @@ let basediv = document.createElement("div");
 //name:
 //summary:
 //time_period
-function renderElements(res) {
-	let data = res.data;
-	console.log(data);
-	data.forEach((element) => {
+function renderElements(index) {
+	if (index < data.length) {
+		let element = data[index];
 		document.body.appendChild(
 			generatediv(
 				element.name,
@@ -36,5 +39,6 @@ function renderElements(res) {
 				element.links.images[0]
 			)
 		);
-	});
+		currentindex = index;
+	}
 }
